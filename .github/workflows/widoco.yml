@@ -7,17 +7,11 @@ on:
       - 'dqvch.ttl'
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: write
 
     steps:
       - uses: actions/checkout@v6
@@ -47,11 +41,8 @@ jobs:
       - name: Add index.html entry point
         run: cp widoco-out/index-en.html widoco-out/index.html
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v5
-        with:
-          path: ./widoco-out
-
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./widoco-out
