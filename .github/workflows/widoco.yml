@@ -20,7 +20,7 @@ jobs:
         run: mkdir -p widoco-out && chmod 777 widoco-out
 
       - name: Set modification date
-        run: sed -i "s/^dateModified=.*/dateModified=$(date +%Y-%m-%d)/" config.properties
+        run: echo "dateModified=$(date +%Y-%m-%d)" >> config.properties
 
       - name: Run Widoco
         run: |
