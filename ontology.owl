@@ -737,6 +737,39 @@
         <prov:wasDerivedFrom rdf:resource="https://doi.org/10.3233/SW-150175"/>
         <prov:wasDerivedFrom rdf:resource="https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="https://doi.org/10.1145/1012453.1012461">
+        <rdfs:label>Scannapieco &amp; Catarci (2002)</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.1145/1541880.1541883">
+        <rdfs:label>Batini et al. (2009)</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.1145/240455.240479">
+        <rdfs:label>Wand &amp; Wang (1996)</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.1145/3362121">
+        <rdfs:label>Firmani et al. (2020)</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://doi.org/10.3233/SW-150175">
+        <rdfs:label>Zaveri et al. (2016)</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf">
+        <rdfs:label>Black et al. (2020)</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://www.iso.org/standard/35736.html">
+        <rdfs:label>ISO 25012 (2008)</rdfs:label>
+    </rdf:Description>
 </rdf:RDF>
 
 
