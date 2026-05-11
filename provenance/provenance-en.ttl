@@ -2,8 +2,15 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
-<..\index-en.html> a prov:Entity;
-	 dc:title "Title goes here";
+<https://w3id.org/dqvch/1.0.0> a prov:Entity;
+	 dc:title "Data Quality Vocabulary for Cultural Heritage (DQVCH)";
+	 prov:wasAttributedTo <https://orcid.org/0000-0003-4389-5871>;
+	 dc:creator <https://orcid.org/0000-0003-4389-5871>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0002-5042-1087>;
+	 dc:creator <https://orcid.org/0000-0002-5042-1087>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0002-3975-5238>;
+	 dc:creator <https://orcid.org/0000-0002-3975-5238>;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
-	 prov:wasGeneratedAt "Date created";
+	 prov:specializationOf <https://w3id.org/dqvch#>;
+	 prov:wasGeneratedAt "2026-01-01";
 .
