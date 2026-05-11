@@ -19,6 +19,9 @@ jobs:
       - name: Create output directory
         run: mkdir -p widoco-out && chmod 777 widoco-out
 
+      - name: Set modification date
+        run: sed -i "s/^dateModified=.*/dateModified=$(date +%Y-%m-%d)/" config.properties
+
       - name: Run Widoco
         run: |
           docker run --rm \
