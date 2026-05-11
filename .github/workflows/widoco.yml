@@ -7,11 +7,17 @@ on:
       - 'dqvch.ttl'
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - uses: actions/checkout@v6
@@ -38,8 +44,14 @@ jobs:
           ls -la widoco-out/
           test -f widoco-out/index-en.html || (echo "ERROR: index-en.html missing" && exit 1)
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Add index.html entry point
+        run: cp widoco-out/index-en.html widoco-out/index.html
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./widoco-out
+          path: ./widoco-out
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
