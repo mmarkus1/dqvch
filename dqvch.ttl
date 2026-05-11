@@ -1,0 +1,446 @@
+@prefix dqv:   <http://www.w3.org/ns/dqv#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix dqvch: <https://w3id.org/dqvch#> .
+
+# Source URIs of Related Work
+# wand:    https://doi.org/10.1145/240455.240479
+# scann:   https://doi.org/10.1145/1012453.1012461
+# iso:     https://www.iso.org/standard/35736.html
+# batini:  https://doi.org/10.1145/1541880.1541883
+# zaveri:  https://doi.org/10.3233/SW-150175
+# firmani: https://doi.org/10.1145/3362121
+# black:   https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf
+
+# ---------------------------------------------------------------------------
+# Ontology declaration
+# ---------------------------------------------------------------------------
+
+dqvch:
+    a owl:Ontology ;
+    rdfs:label "Data Quality Vocabulary for Cultural Heritage (dqvch)"@en ;
+    rdfs:comment "A vocabulary of data quality dimensions for descriptive information about cultural heritage objects, modelled using W3C DQV."@en .
+
+# ---------------------------------------------------------------------------
+# Categories
+# ---------------------------------------------------------------------------
+
+dqvch:intrinsicDimensions
+    a dqv:Category ;
+    skos:prefLabel "Intrinsic Dimensions"@en .
+
+dqvch:contextualDimensions
+    a dqv:Category ;
+    skos:prefLabel "Contextual Dimensions"@en .
+
+# ---------------------------------------------------------------------------
+# Intrinsic Dimensions
+# ---------------------------------------------------------------------------
+
+## Accuracy
+
+dqvch:accuracy
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:intrinsicDimensions ;
+    skos:prefLabel "Accuracy"@en ;
+    skos:definition "Accuracy captures the degree to which a dataset correctly and precisely represents information, in accordance with defined standards."@en ;
+    skos:narrower dqvch:syntacticAccuracy ,
+                  dqvch:semanticAccuracy ,
+                  dqvch:externalAccuracy ,
+                  dqvch:compliance ,
+                  dqvch:precision .
+
+# Syntactic Accuracy
+dqvch:syntacticAccuracy
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:intrinsicDimensions ;
+    skos:prefLabel "Syntactic Accuracy"@en ;
+    skos:definition "Syntactic Accuracy refers to the degree to which the dataset conforms to the syntax of the employed data description language and, where applicable, the associated data model."@en ;
+    skos:broader dqvch:accuracy ;
+    skos:example "In the cultural heritage context, LIDO data should conform to the XML data description language and to the LIDO data model to be syntactically correct."@en ;
+    prov:hadPrimarySource <https://doi.org/10.1145/1012453.1012461> ,
+                          <https://doi.org/10.1145/1541880.1541883> ,
+                          <https://doi.org/10.3233/SW-150175> ,
+                          <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ;
+    prov:wasDerivedFrom   <https://www.iso.org/standard/35736.html> .
+
+# Semantic Accuracy
+dqvch:semanticAccuracy
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:intrinsicDimensions ;
+    skos:prefLabel "Semantic Accuracy"@en ;
+    skos:definition "Semantic Accuracy refers to the degree to which the dataset correctly represents information of the domain of interest."@en ;
+    skos:broader dqvch:accuracy ;
+    skos:example "The Mona Lisa is a painting by Leonardo da Vinci. Attributing the painting to the artist Pablo Picasso would be semantically inaccurate."@en ;
+    skos:example "If a building can be attributed with a date, it depends on the description in the data model what kind of date it is. For instance, recording the foundation date of a church when the model specifies the completion date would be semantically inaccurate."@en ;
+    prov:hadPrimarySource <https://doi.org/10.1145/240455.240479> ,
+                          <https://www.iso.org/standard/35736.html> ,
+                          <https://doi.org/10.3233/SW-150175> ,
+                          <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ;
+    prov:wasDerivedFrom   <https://doi.org/10.1145/1012453.1012461> ;
+    prov:wasInfluencedBy  <https://doi.org/10.1145/1541880.1541883> .
+
+# External Accuracy
+dqvch:externalAccuracy
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:intrinsicDimensions ;
+    skos:prefLabel "External Accuracy"@en ;
+    skos:definition "External Accuracy refers to the degree to which all interlinks in a dataset are valid and refer to the intended data elements in external datasets."@en ;
+    skos:broader dqvch:accuracy ;
+    skos:example "A place of birth may be indicated by a name, which should ideally be accompanied by a link to a location register. For external accuracy, this link must be valid and resolvable."@en ;
+    skos:example "A link to an artwork type is accurate if the type is as specific as possible. Typical registers such as the controlled vocabulary Art & Architecture Thesaurus (AAT) capture multidimensional relationships and provide links to general and more specific entries."@en ;
+    prov:wasDerivedFrom  <https://doi.org/10.3233/SW-150175> ;
+    prov:wasInfluencedBy <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> .
+
+# Compliance
+dqvch:compliance
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:intrinsicDimensions ;
+    skos:prefLabel "Compliance"@en ;
+    skos:definition "Compliance refers to the degree to which the dataset conforms to rules and guidelines established for the employed data description language and, where applicable, the associated data model."@en ;
+    skos:broader dqvch:accuracy ;
+    skos:example "The internationally recognized ISO 8601 standard prescribes the date format YYYY-MM-DD."@en ;
+    skos:example "The guidelines for recording cultural heritage data may require photographs' dimensions to be given in cm."@en ;
+    prov:hadPrimarySource <https://www.iso.org/standard/35736.html> ,
+                          <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ;
+    prov:wasDerivedFrom   <https://doi.org/10.1145/1012453.1012461> ,
+                          <https://doi.org/10.3233/SW-150175> .
+
+# Precision
+dqvch:precision
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:intrinsicDimensions ;
+    skos:prefLabel "Precision"@en ;
+    skos:definition "Precision of a dataset refers to the degree of exactness of recorded data values, evaluated with respect to the requirements of a particular context of use."@en ;
+    skos:broader dqvch:accuracy ;
+    skos:example "The required level of precision depends on the object and context. The height of the Burj Khalifa, for instance, can typically be reported in meters, which is sufficient to identify it as the tallest building. In contrast, the dimensions of a print sheet are commonly recorded in millimeters, often supplemented by precise plate measurements for greater accuracy."@en ;
+    prov:hadPrimarySource <https://www.iso.org/standard/35736.html> ,
+                          <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ;
+    prov:wasDerivedFrom   <https://doi.org/10.1145/1541880.1541883> ;
+    prov:wasInfluencedBy  <https://doi.org/10.1145/240455.240479> .
+
+
+## Completeness
+
+dqvch:completeness
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:intrinsicDimensions ;
+    skos:prefLabel "Completeness"@en ;
+    skos:definition "Completeness refers to the extent to which all information required for a particular context of use is present."@en ;
+    skos:narrower dqvch:internalCompleteness ,
+                  dqvch:externalCompleteness .
+
+# Internal Completeness
+dqvch:internalCompleteness
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:intrinsicDimensions ;
+    skos:prefLabel "Internal Completeness"@en ;
+    skos:definition "Internal Completeness refers to the degree to which a dataset contains all data elements of the domain of interest required for a particular context of use, and each of those data elements includes the properties and links required for the intended context of use."@en ;
+    skos:broader dqvch:completeness ;
+    skos:example "In a register of paintings, all paintings created by a particular artist must be included to create a chronological overview of the artist's work."@en ;
+    skos:example "To determine the century in which a person lived, the year of birth may be sufficient. However, assigning a zodiac sign or software-based verification to disambiguating persons with the identical names typically requires the full date of birth."@en ;
+    prov:hadPrimarySource <https://doi.org/10.1145/240455.240479> ,
+                          <https://doi.org/10.1145/1012453.1012461> ,
+                          <https://www.iso.org/standard/35736.html> ,
+                          <https://doi.org/10.1145/1541880.1541883> ,
+                          <https://doi.org/10.3233/SW-150175> ,
+                          <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> .
+
+# External Completeness
+dqvch:externalCompleteness
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:intrinsicDimensions ;
+    skos:prefLabel "External Completeness"@en ;
+    skos:definition "External Completeness refers to the degree to which a dataset contains all interlinks to external datasets that are required for a particular context of use."@en ;
+    skos:broader dqvch:completeness ;
+    skos:example "To avoid ambiguity, each place of birth should be indicated by a valid link to a specific location register, such as GeoNames."@en ;
+    prov:hadPrimarySource <https://doi.org/10.3233/SW-150175> ;
+    prov:wasInfluencedBy  <https://www.iso.org/standard/35736.html> ,
+                          <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> .
+
+
+## Conciseness
+
+dqvch:conciseness
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:intrinsicDimensions ;
+    skos:prefLabel "Conciseness"@en ;
+    skos:definition "Conciseness reflects the degree to which a dataset presents essential information efficiently."@en ;
+    skos:narrower dqvch:relevance ,
+                  dqvch:compactness .
+
+# Relevance
+dqvch:relevance
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:intrinsicDimensions ;
+    skos:prefLabel "Relevance"@en ;
+    skos:definition "Relevance refers to the degree to which a dataset contains only those data elements, links and properties required for a particular context of use."@en ;
+    skos:broader dqvch:conciseness ;
+    skos:example "In the metadata for a painting, specifying the artist of the painting is relevant. In contrast, including extraneous personal information about the artist, such as details of their clothing, is irrelevant for the purpose of describing the artwork."@en ;
+    prov:hadPrimarySource <https://doi.org/10.3233/SW-150175> ,
+                          <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> .
+
+# Compactness
+dqvch:compactness
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:intrinsicDimensions ;
+    skos:prefLabel "Compactness"@en ;
+    skos:definition "Compactness refers to the degree to which a dataset contains no redundant elements and all elements are compact. A data element is compact if it does not contain redundant links or properties. A data value is compact if it is as condensed as possible."@en ;
+    skos:broader dqvch:conciseness ;
+    skos:example "A dataset of paintings from an exhibition is compact if it does not contain multiple elements describing the same painting."@en ;
+    skos:example "A data element that specifies the size of a photograph is compact if it includes only the relevant measurement (e.g., the size of photograph itself) without redundant information (e.g., the frame size, unless contextually required)."@en ;
+    skos:example "A data value for the width of a photograph is compact if it is expressed in a concise numeric form, without unnecessary leading zeros."@en ;
+    prov:hadPrimarySource <https://www.iso.org/standard/35736.html> ;
+    prov:wasDerivedFrom   <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ;
+    prov:wasInfluencedBy  <https://doi.org/10.3233/SW-150175> .
+
+
+## Consistency
+
+dqvch:consistency
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:intrinsicDimensions ;
+    skos:prefLabel "Consistency"@en ;
+    skos:definition "Consistency refers to the uniformity of information within a dataset without internal conflicts."@en ;
+    skos:narrower dqvch:logicalConsistency ,
+                  dqvch:coherence .
+
+# Logical Consistency
+dqvch:logicalConsistency
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:intrinsicDimensions ;
+    skos:prefLabel "Logical Consistency"@en ;
+    skos:definition "Logical Consistency refers to the degree to which a dataset is free from logical contradictions within a given domain of interest and context of use."@en ;
+    skos:broader dqvch:consistency ;
+    skos:example "The date of a person's death must not precede their date of birth; any violation constitutes a logical contradiction."@en ;
+    prov:hadPrimarySource <https://www.iso.org/standard/35736.html> ,
+                          <https://doi.org/10.1145/1541880.1541883> ,
+                          <https://doi.org/10.3233/SW-150175> ;
+    prov:wasDerivedFrom   <https://doi.org/10.1145/1012453.1012461> ,
+                          <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> .
+
+# Coherence
+dqvch:coherence
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:intrinsicDimensions ;
+    skos:prefLabel "Coherence"@en ;
+    skos:definition "Coherence refers to the degree to which the dataset contains coherent data elements. Two data elements are coherent if their respective properties and links are coherent in pairs. Two properties are coherent if their data values are the same when representing the same information. Two links are coherent if they refer to the same element when representing the same information. Two data values are coherent if similar information is expressed in a consistent format."@en ;
+    skos:broader dqvch:consistency ;
+    skos:example "In a dataset of photograph metadata, all elements are coherent if measurements for width and height are specified consistently across records."@en ;
+    skos:example "Width and height values should use the same units, such as cm, for all elements."@en ;
+    skos:example "Location name London must be unambiguous for cities; This can be achieved, e.g., by a suffix such as London (United Kingdom)."@en ;
+    skos:example "Each city should be represented by a single data element, ensuring that all links to that city are unambiguous."@en ;
+    skos:example "Measurement values are coherent if their formats are identical. For example, integers should be consistently represented without leading zeros."@en ;
+    prov:hadPrimarySource <https://www.iso.org/standard/35736.html> ,
+                          <https://doi.org/10.3233/SW-150175> ,
+                          <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ;
+    prov:wasDerivedFrom   <https://doi.org/10.1145/240455.240479> ,
+                          <https://doi.org/10.1145/1012453.1012461> ,
+                          <https://doi.org/10.1145/1541880.1541883> .
+
+# ---------------------------------------------------------------------------
+# Contextual Dimensions
+# ---------------------------------------------------------------------------
+
+## Accessibility
+
+dqvch:accessibility
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:contextualDimensions ;
+    skos:prefLabel "Accessibility"@en ;
+    skos:definition "Accessibility refers to additional information that govern access to data."@en ;
+    skos:narrower dqvch:availability ,
+                  dqvch:confidentiality ,
+                  dqvch:integrity .
+
+# Availability
+dqvch:availability
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:contextualDimensions ;
+    skos:prefLabel "Availability"@en ;
+    skos:definition "Availability is the degree to which data can be accessed when required for a given context of use."@en ;
+    skos:broader dqvch:accessibility ;
+    skos:example "Accessing a resource through a website enhances its availability. Specifying a unique and persistent identifier, such as a Digital Object Identifier (DOI), further improves availability by ensuring that an organization is responsible for maintaining the resource's integrity and long-term accessibility."@en ;
+    prov:hadPrimarySource <https://doi.org/10.3233/SW-150175> ,
+                          <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ;
+    prov:wasDerivedFrom   <https://doi.org/10.1145/240455.240479> ,
+                          <https://www.iso.org/standard/35736.html> .
+
+# Confidentiality
+dqvch:confidentiality
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:contextualDimensions ;
+    skos:prefLabel "Confidentiality"@en ;
+    skos:definition "Confidentiality refers to the restriction of access to authorized users only, ensuring that sensitive data is protected according to the requirements of a given context of use."@en ;
+    skos:broader dqvch:accessibility ;
+    skos:example "Certain information, such as the owner's name of an object form, may be crucial for provenance tracking in a museum but must be hidden during data export to protect privacy."@en ;
+    skos:example "Role-based access control is often applied to data collections. For example, new staff may be permitted to edit newly entered data, whereas editors have write access to all the data within a collection."@en ;
+    prov:hadPrimarySource <https://www.iso.org/standard/35736.html> ,
+                          <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ;
+    prov:wasDerivedFrom   <https://doi.org/10.3233/SW-150175> .
+
+# Integrity
+dqvch:integrity
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:contextualDimensions ;
+    skos:prefLabel "Integrity"@en ;
+    skos:definition "Integrity refers to the degree to which data remains free from unintentional or unauthorized alterations, preserving its intended state over time."@en ;
+    skos:broader dqvch:accessibility ;
+    skos:example "Techniques such as digital signatures and cryptographic hashes can be employed to verify the authenticity of data changes, thereby distinguishing authorized changes from unauthorized or accidental alterations."@en ;
+    prov:hadPrimarySource <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ;
+    prov:wasDerivedFrom   <https://www.iso.org/standard/35736.html> ,
+                          <https://doi.org/10.3233/SW-150175> ,
+                          <https://doi.org/10.1145/3362121> .
+
+
+## Currency
+
+dqvch:currency
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:contextualDimensions ;
+    skos:prefLabel "Currency"@en ;
+    skos:definition "Currency refers to the extent to which a dataset reflects up-to-date information from the domain of interest."@en ;
+    skos:narrower dqvch:dataCurrency ,
+                  dqvch:dataUpdateCurrency ,
+                  dqvch:timeConcurrency .
+
+# Data Currency
+dqvch:dataCurrency
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:contextualDimensions ;
+    skos:prefLabel "Data Currency"@en ;
+    skos:definition "Data Currency refers to the degree to which a dataset contains up-to-date information relevant to the domain of interest."@en ;
+    skos:broader dqvch:currency ;
+    skos:example "Paintings can change ownership at auctions. To accurately determine the current location of an artist's paintings, the data must always be up-to-date."@en ;
+    prov:hadPrimarySource <https://www.iso.org/standard/35736.html> ,
+                          <https://doi.org/10.3233/SW-150175> ,
+                          <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> .
+
+# Data Update Currency
+dqvch:dataUpdateCurrency
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:contextualDimensions ;
+    skos:prefLabel "Data Update Currency"@en ;
+    skos:definition "Data Update Currency refers to the degree to which a dataset is updated promptly after information in a domain of interest has changed."@en ;
+    skos:broader dqvch:currency ;
+    skos:example "Museum inventories are conducted periodically and may reveal discrepancies with existing data. The closer an inventory is performed relative to changes in holdings, the more current the data."@en ;
+    skos:example "Natural dynamics, such as the tilt of the Leaning Tower of Pisa, are monitored regularly. The more recent the measurements, the more accurately the data reflects the current state."@en ;
+    prov:hadPrimarySource <https://doi.org/10.1145/240455.240479> ,
+                          <https://doi.org/10.1145/1012453.1012461> .
+
+# Time Concurrency
+dqvch:timeConcurrency
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:contextualDimensions ;
+    skos:prefLabel "Time Concurrency"@en ;
+    skos:definition "Time Concurrency assesses whether all data elements, including their values and links, refer consistently to the same version of information in the domain."@en ;
+    skos:broader dqvch:currency ;
+    skos:example "In a museum, paintings may be relocated as part of an exhibition. If some paintings' location data are already updated to the current exhibition, while others remain outdated, the data lacks time concurrency, resulting in inconsistent representation of the exhibition."@en .
+
+
+## Plausibility
+
+dqvch:plausibility
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:contextualDimensions ;
+    skos:prefLabel "Plausibility"@en ;
+    skos:definition "Plausibility refers to the degree to which information can be considered credible."@en ;
+    skos:narrower dqvch:provenance ,
+                  dqvch:trustworthiness .
+
+# Provenance
+dqvch:provenance
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:contextualDimensions ;
+    skos:prefLabel "Provenance"@en ;
+    skos:definition "Provenance refers to the degree to which a dataset, including its elements and values, are equipped with verifiable information about its origin."@en ;
+    skos:broader dqvch:plausibility ;
+    skos:example "A death certificate cited as the source for a person's date of death provides verifiable evidence, enhancing the plausibility of the data."@en ;
+    prov:hadPrimarySource <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ;
+    prov:wasDerivedFrom   <https://doi.org/10.1145/3362121> .
+
+# Trustworthiness
+dqvch:trustworthiness
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:contextualDimensions ;
+    skos:prefLabel "Trustworthiness"@en ;
+    skos:definition "Trustworthiness refers to the degree to which a dataset, including its elements and values, are believed by a relevant community within a specific context of use."@en ;
+    skos:broader dqvch:plausibility ;
+    skos:example "Cultural heritage information published by a reputable museum about an object in its possession is generally more trustworthy than information in tourist promotional material, as the museum is recognized for its expertise and responsible handling of information."@en ;
+    skos:example "Similarly, the reputation, education, and experience of the data contributor influence trustworthiness."@en ;
+    prov:hadPrimarySource <https://www.iso.org/standard/35736.html> ,
+                          <https://doi.org/10.3233/SW-150175> ;
+    prov:wasDerivedFrom   <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> .
+
+
+## Traceability
+
+dqvch:traceability
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:contextualDimensions ;
+    skos:prefLabel "Traceability"@en ;
+    skos:definition "Traceability refers to the availability of information regarding changes of data over time."@en ;
+    skos:narrower dqvch:temporalTraceability ,
+                  dqvch:causalTraceability .
+
+# Temporal Traceability
+dqvch:temporalTraceability
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:contextualDimensions ;
+    skos:prefLabel "Temporal Traceability"@en ;
+    skos:definition "Temporal Traceability is the degree to which a dataset has an audit trail of access and a history of changes within a particular context of use."@en ;
+    skos:broader dqvch:traceability ;
+    skos:example "Historic buildings are typically dynamic in nature. All changes, additions, and demolitions to a building should be recorded in a detailed history of change to maintain temporal traceability."@en ;
+    prov:hadPrimarySource <https://www.iso.org/standard/35736.html> ;
+    prov:wasDerivedFrom   <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> .
+
+# Causal Traceability
+dqvch:causalTraceability
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:contextualDimensions ;
+    skos:prefLabel "Causal Traceability"@en ;
+    skos:definition "Causal Traceability is the degree to which causal dependencies among dataset updates are documented and accessible for a given context of use."@en ;
+    skos:broader dqvch:traceability ;
+    skos:example "Changes to a historic building may trigger updates to related data, such as the group of architects responsible for modifications of the building. In this context, sculptures may have been relocated due to change."@en ;
+    prov:wasDerivedFrom <https://doi.org/10.1145/3362121> .
+
+
+## Understandability
+
+dqvch:understandability
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:contextualDimensions ;
+    skos:prefLabel "Understandability"@en ;
+    skos:definition "Understandability refers to the ease with which data can be comprehended and processed by users, including both humans and tools."@en ;
+    skos:narrower dqvch:appropriateness ,
+                  dqvch:versatility .
+
+# Appropriateness
+dqvch:appropriateness
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:contextualDimensions ;
+    skos:prefLabel "Appropriateness"@en ;
+    skos:definition "Appropriateness refers to the ease with which data can be understood without ambiguity within a given context of use."@en ;
+    skos:broader dqvch:understandability ;
+    skos:example "The city name 'London' as a birthplace may be ambiguous and can lead to misunderstandings, as there are multiple cities with that name in different countries. Providing geolocations or references to a location register reduces ambiguity and increase understanding."@en ;
+    prov:hadPrimarySource <https://www.iso.org/standard/35736.html> ,
+                          <https://doi.org/10.3233/SW-150175> ,
+                          <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> .
+
+# Versatility
+dqvch:versatility
+    a dqv:Dimension ;
+    dqv:inCategory dqvch:contextualDimensions ;
+    skos:prefLabel "Versatility"@en ;
+    skos:definition "Versatility refers to the extent to which data is available in different forms across different cultural perspectives, technology platforms, and user sensory abilities."@en ;
+    skos:broader dqvch:understandability ;
+    skos:example "Measurements in the metric system are easily understood in Europe but may be less intuitive for US Americans."@en ;
+    skos:example "The date of New Year's celebration varies between the Gregorian and lunar calendars, necessitating contextual clarification."@en ;
+    skos:example "Historical dates prior to 1582 require distinguishing between the Julian and Gregorian calendars. Providing data in multiple formats or adhering to ISO 8601 can prevent misinterpretation and enhance versatility."@en ;
+    prov:hadPrimarySource <https://www.iso.org/standard/35736.html> ,
+                          <https://doi.org/10.1145/3362121> ;
+    prov:wasDerivedFrom   <https://doi.org/10.3233/SW-150175> ,
+                          <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> .

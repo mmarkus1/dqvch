@@ -1,0 +1,36 @@
+name: Deploy Widoco Documentation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'dqvch.ttl'
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Run Widoco
+        run: |
+          docker run --rm \
+            -v "${{ github.workspace }}:/data" \
+            ghcr.io/dgarijo/widoco:latest \
+            -ontFile /data/dqvch.ttl \
+            -outFolder /data/widoco-out \
+            -rewriteAll \
+            -includeAnnotationProperties \
+            -lang en \
+            -noPlaceholders \
+            -htaccess
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./widoco-out
