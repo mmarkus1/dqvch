@@ -26,14 +26,13 @@ dqvch:
     a owl:Ontology ;
     rdfs:label        "Data Quality Vocabulary for Cultural Heritage (dqvch)"@en ;
     rdfs:comment      "A vocabulary of data quality dimensions for descriptive information about cultural heritage objects, modelled using W3C DQV."@en ;
-    dcterms:title     "Data Quality Vocabulary for Cultural Heritage (DQVCH)"@en ;
     dcterms:license   <https://creativecommons.org/licenses/by/4.0/> ;
     dcterms:creator   <https://orcid.org/0000-0003-4389-5871> ,
                       <https://orcid.org/0000-0002-5042-1087> ,
                       <https://orcid.org/0000-0002-3975-5238> ;
-    dcterms:created   "2026-01-01"^^xsd:date ;
-    dcterms:modified  "2026-05-11"^^xsd:date ;
-    dcterms:issued    "2026-05-11"^^xsd:date ;
+    dcterms:created   "2026-01-01" ;
+    dcterms:modified  "2026-05-11" ;
+    dcterms:issued    "2026-05-11" ;
     owl:versionInfo   "1.0.0" ;
     vann:preferredNamespacePrefix "dqvch" ;
     vann:preferredNamespaceUri    "https://w3id.org/dqvch#" ;
