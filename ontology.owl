@@ -13,13 +13,10 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/dqvch#">
         <terms:bibliographicCitation xml:lang="en">Matoni, M., Kesper, A., &amp; Taentzer, G. (2026). Quality of Descriptive Information on Cultural Heritage Objects: Definition and Empirical Evaluation. arXiv:2602.21249. https://doi.org/10.48550/arXiv.2602.21249</terms:bibliographicCitation>
-        <terms:created>2026-01-01</terms:created>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-3975-5238"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0002-5042-1087"/>
         <terms:creator rdf:resource="https://orcid.org/0000-0003-4389-5871"/>
-        <terms:issued>2026-05-11</terms:issued>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <terms:modified>2026-05-11</terms:modified>
         <vann:preferredNamespacePrefix>dqvch</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/dqvch#</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="en">A vocabulary of data quality dimensions for descriptive information about cultural heritage objects, modelled using W3C DQV.</rdfs:comment>
@@ -49,13 +46,6 @@
     
 
 
-    <!-- http://purl.org/dc/terms/created -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
-    
-
-
     <!-- http://purl.org/dc/terms/creator -->
 
 
@@ -63,24 +53,10 @@
     
 
 
-    <!-- http://purl.org/dc/terms/issued -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
-    
-
-
     <!-- http://purl.org/dc/terms/license -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/modified -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
     
 
 

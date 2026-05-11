@@ -1,12 +1,9 @@
 <https://w3id.org/dqvch#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/dqvch#> <http://purl.org/dc/terms/bibliographicCitation> "Matoni, M., Kesper, A., & Taentzer, G. (2026). Quality of Descriptive Information on Cultural Heritage Objects: Definition and Empirical Evaluation. arXiv:2602.21249. https://doi.org/10.48550/arXiv.2602.21249"@en .
-<https://w3id.org/dqvch#> <http://purl.org/dc/terms/created> "2026-01-01" .
 <https://w3id.org/dqvch#> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-3975-5238> .
 <https://w3id.org/dqvch#> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-5042-1087> .
 <https://w3id.org/dqvch#> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0003-4389-5871> .
-<https://w3id.org/dqvch#> <http://purl.org/dc/terms/issued> "2026-05-11" .
 <https://w3id.org/dqvch#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<https://w3id.org/dqvch#> <http://purl.org/dc/terms/modified> "2026-05-11" .
 <https://w3id.org/dqvch#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "dqvch" .
 <https://w3id.org/dqvch#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/dqvch#" .
 <https://w3id.org/dqvch#> <http://www.w3.org/2000/01/rdf-schema#comment> "A vocabulary of data quality dimensions for descriptive information about cultural heritage objects, modelled using W3C DQV."@en .
@@ -25,20 +22,11 @@
 # http://purl.org/dc/terms/bibliographicCitation
 <http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://purl.org/dc/terms/created
-<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
 # http://purl.org/dc/terms/creator
 <http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# http://purl.org/dc/terms/issued
-<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
 # http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://purl.org/dc/terms/modified
-<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/vocab/vann/preferredNamespacePrefix
 <http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

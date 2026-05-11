@@ -2,19 +2,10 @@
   "@id" : "http://purl.org/dc/terms/bibliographicCitation",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://purl.org/dc/terms/created",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
   "@id" : "http://purl.org/dc/terms/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://purl.org/dc/terms/issued",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
   "@id" : "http://purl.org/dc/terms/license",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://purl.org/dc/terms/modified",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
@@ -62,9 +53,6 @@
     "@language" : "en",
     "@value" : "Matoni, M., Kesper, A., & Taentzer, G. (2026). Quality of Descriptive Information on Cultural Heritage Objects: Definition and Empirical Evaluation. arXiv:2602.21249. https://doi.org/10.48550/arXiv.2602.21249"
   } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@value" : "2026-01-01"
-  } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@id" : "https://orcid.org/0000-0002-3975-5238"
   }, {
@@ -72,14 +60,8 @@
   }, {
     "@id" : "https://orcid.org/0000-0003-4389-5871"
   } ],
-  "http://purl.org/dc/terms/issued" : [ {
-    "@value" : "2026-05-11"
-  } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
-  } ],
-  "http://purl.org/dc/terms/modified" : [ {
-    "@value" : "2026-05-11"
   } ],
   "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
     "@value" : "dqvch"
