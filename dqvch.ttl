@@ -9,14 +9,30 @@
 @prefix vann:    <http://purl.org/vocab/vann/> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
-# Source URIs of Related Work
-# wand:    https://doi.org/10.1145/240455.240479
-# scann:   https://doi.org/10.1145/1012453.1012461
-# iso:     https://www.iso.org/standard/35736.html
-# batini:  https://doi.org/10.1145/1541880.1541883
-# zaveri:  https://doi.org/10.3233/SW-150175
-# firmani: https://doi.org/10.1145/3362121
-# black:   https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf
+# ---------------------------------------------------------------------------
+# Labels for related work sources (used by Widoco as link text)
+# ---------------------------------------------------------------------------
+
+<https://doi.org/10.1145/240455.240479>
+    rdfs:label "Wand & Wang (1996)" .
+
+<https://doi.org/10.1145/1012453.1012461>
+    rdfs:label "Scannapieco & Catarci (2002)" .
+
+<https://www.iso.org/standard/35736.html>
+    rdfs:label "ISO 25012 (2008)" .
+
+<https://doi.org/10.1145/1541880.1541883>
+    rdfs:label "Batini et al. (2009)" .
+
+<https://doi.org/10.3233/SW-150175>
+    rdfs:label "Zaveri et al. (2016)" .
+
+<https://doi.org/10.1145/3362121>
+    rdfs:label "Firmani et al. (2020)" .
+
+<https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf>
+    rdfs:label "Black et al. (2020)" .
 
 # ---------------------------------------------------------------------------
 # Ontology declaration
