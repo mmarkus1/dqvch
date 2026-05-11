@@ -8,14 +8,13 @@
 
 <https://w3id.org/dqvch#> rdf:type owl:Ontology ;
                            <http://purl.org/dc/terms/bibliographicCitation> "Matoni, M., Kesper, A., & Taentzer, G. (2026). Quality of Descriptive Information on Cultural Heritage Objects: Definition and Empirical Evaluation. arXiv:2602.21249. https://doi.org/10.48550/arXiv.2602.21249"@en ;
-                           <http://purl.org/dc/terms/created> "2026-01-01"^^xsd:date ;
+                           <http://purl.org/dc/terms/created> "2026-01-01" ;
                            <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-3975-5238> ,
                                                               <https://orcid.org/0000-0002-5042-1087> ,
                                                               <https://orcid.org/0000-0003-4389-5871> ;
-                           <http://purl.org/dc/terms/issued> "2026-05-11"^^xsd:date ;
+                           <http://purl.org/dc/terms/issued> "2026-05-11" ;
                            <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
-                           <http://purl.org/dc/terms/modified> "2026-05-11"^^xsd:date ;
-                           <http://purl.org/dc/terms/title> "Data Quality Vocabulary for Cultural Heritage (DQVCH)"@en ;
+                           <http://purl.org/dc/terms/modified> "2026-05-11" ;
                            <http://purl.org/vocab/vann/preferredNamespacePrefix> "dqvch" ;
                            <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/dqvch#" ;
                            rdfs:comment "A vocabulary of data quality dimensions for descriptive information about cultural heritage objects, modelled using W3C DQV."@en ;
@@ -49,10 +48,6 @@
 
 ###  http://purl.org/dc/terms/modified
 <http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/title
-<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
@@ -97,14 +92,6 @@
 
 ###  http://www.w3.org/ns/prov#wasInfluencedBy
 <http://www.w3.org/ns/prov#wasInfluencedBy> rdf:type owl:AnnotationProperty .
-
-
-#################################################################
-#    Datatypes
-#################################################################
-
-###  http://www.w3.org/2001/XMLSchema#date
-xsd:date rdf:type rdfs:Datatype .
 
 
 #################################################################
