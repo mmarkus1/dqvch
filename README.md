@@ -8,6 +8,8 @@
 A vocabulary of data quality dimensions for descriptive information about cultural
 heritage objects, modelled using [W3C DQV](https://www.w3.org/TR/vocab-dqv/).
 
+→ **[Browse the vocabulary](https://mmarkus1.github.io/dqvch/)**
+
 ## Vocabulary
 
 The vocabulary is defined in [`dqvch.ttl`](dqvch.ttl) with a human-readable rendering
