@@ -1,0 +1,700 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/dqvch#"
+     xml:base="https://w3id.org/dqvch"
+     xmlns:dqv="http://www.w3.org/ns/dqv#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="https://w3id.org/dqvch#">
+        <rdfs:comment xml:lang="en">A vocabulary of data quality dimensions for descriptive information about cultural heritage objects, modelled using W3C DQV.</rdfs:comment>
+        <rdfs:label xml:lang="en">Data Quality Vocabulary for Cultural Heritage (dqvch)</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrower -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrower"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#inCategory -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dqv#inCategory"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#hadPrimarySource -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#hadPrimarySource"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasInfluencedBy -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#wasInfluencedBy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#Category -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dqv#Category"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dqv#Dimension -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dqv#Dimension"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/dqvch#accessibility -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#accessibility">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:definition xml:lang="en">Accessibility refers to additional information that govern access to data.</skos:definition>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#availability"/>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#confidentiality"/>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#integrity"/>
+        <skos:prefLabel xml:lang="en">Accessibility</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#contextualDimensions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#accuracy -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#accuracy">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:definition xml:lang="en">Accuracy captures the degree to which a dataset correctly and precisely represents information, in accordance with defined standards.</skos:definition>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#compliance"/>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#externalAccuracy"/>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#precision"/>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#semanticAccuracy"/>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#syntacticAccuracy"/>
+        <skos:prefLabel xml:lang="en">Accuracy</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#intrinsicDimensions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#appropriateness -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#appropriateness">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#understandability"/>
+        <skos:definition xml:lang="en">Appropriateness refers to the ease with which data can be understood without ambiguity within a given context of use.</skos:definition>
+        <skos:example xml:lang="en">The city name &apos;London&apos; as a birthplace may be ambiguous and can lead to misunderstandings, as there are multiple cities with that name in different countries. Providing geolocations or references to a location register reduces ambiguity and increase understanding.</skos:example>
+        <skos:prefLabel xml:lang="en">Appropriateness</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#contextualDimensions"/>
+        <prov:hadPrimarySource rdf:resource="https://doi.org/10.3233/SW-150175"/>
+        <prov:hadPrimarySource rdf:resource="https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf"/>
+        <prov:hadPrimarySource rdf:resource="https://www.iso.org/standard/35736.html"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#availability -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#availability">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#accessibility"/>
+        <skos:definition xml:lang="en">Availability is the degree to which data can be accessed when required for a given context of use.</skos:definition>
+        <skos:example xml:lang="en">Accessing a resource through a website enhances its availability. Specifying a unique and persistent identifier, such as a Digital Object Identifier (DOI), further improves availability by ensuring that an organization is responsible for maintaining the resource&apos;s integrity and long-term accessibility.</skos:example>
+        <skos:prefLabel xml:lang="en">Availability</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#contextualDimensions"/>
+        <prov:hadPrimarySource rdf:resource="https://doi.org/10.3233/SW-150175"/>
+        <prov:hadPrimarySource rdf:resource="https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf"/>
+        <prov:wasDerivedFrom rdf:resource="https://doi.org/10.1145/240455.240479"/>
+        <prov:wasDerivedFrom rdf:resource="https://www.iso.org/standard/35736.html"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#causalTraceability -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#causalTraceability">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#traceability"/>
+        <skos:definition xml:lang="en">Causal Traceability is the degree to which causal dependencies among dataset updates are documented and accessible for a given context of use.</skos:definition>
+        <skos:example xml:lang="en">Changes to a historic building may trigger updates to related data, such as the group of architects responsible for modifications of the building. In this context, sculptures may have been relocated due to change.</skos:example>
+        <skos:prefLabel xml:lang="en">Causal Traceability</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#contextualDimensions"/>
+        <prov:wasDerivedFrom rdf:resource="https://doi.org/10.1145/3362121"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#coherence -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#coherence">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#consistency"/>
+        <skos:definition xml:lang="en">Coherence refers to the degree to which the dataset contains coherent data elements. Two data elements are coherent if their respective properties and links are coherent in pairs. Two properties are coherent if their data values are the same when representing the same information. Two links are coherent if they refer to the same element when representing the same information. Two data values are coherent if similar information is expressed in a consistent format.</skos:definition>
+        <skos:example xml:lang="en">Each city should be represented by a single data element, ensuring that all links to that city are unambiguous.</skos:example>
+        <skos:example xml:lang="en">In a dataset of photograph metadata, all elements are coherent if measurements for width and height are specified consistently across records.</skos:example>
+        <skos:example xml:lang="en">Location name London must be unambiguous for cities; This can be achieved, e.g., by a suffix such as London (United Kingdom).</skos:example>
+        <skos:example xml:lang="en">Measurement values are coherent if their formats are identical. For example, integers should be consistently represented without leading zeros.</skos:example>
+        <skos:example xml:lang="en">Width and height values should use the same units, such as cm, for all elements.</skos:example>
+        <skos:prefLabel xml:lang="en">Coherence</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#intrinsicDimensions"/>
+        <prov:hadPrimarySource rdf:resource="https://doi.org/10.3233/SW-150175"/>
+        <prov:hadPrimarySource rdf:resource="https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf"/>
+        <prov:hadPrimarySource rdf:resource="https://www.iso.org/standard/35736.html"/>
+        <prov:wasDerivedFrom rdf:resource="https://doi.org/10.1145/1012453.1012461"/>
+        <prov:wasDerivedFrom rdf:resource="https://doi.org/10.1145/1541880.1541883"/>
+        <prov:wasDerivedFrom rdf:resource="https://doi.org/10.1145/240455.240479"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#compactness -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#compactness">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#conciseness"/>
+        <skos:definition xml:lang="en">Compactness refers to the degree to which a dataset contains no redundant elements and all elements are compact. A data element is compact if it does not contain redundant links or properties. A data value is compact if it is as condensed as possible.</skos:definition>
+        <skos:example xml:lang="en">A data element that specifies the size of a photograph is compact if it includes only the relevant measurement (e.g., the size of photograph itself) without redundant information (e.g., the frame size, unless contextually required).</skos:example>
+        <skos:example xml:lang="en">A data value for the width of a photograph is compact if it is expressed in a concise numeric form, without unnecessary leading zeros.</skos:example>
+        <skos:example xml:lang="en">A dataset of paintings from an exhibition is compact if it does not contain multiple elements describing the same painting.</skos:example>
+        <skos:prefLabel xml:lang="en">Compactness</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#intrinsicDimensions"/>
+        <prov:hadPrimarySource rdf:resource="https://www.iso.org/standard/35736.html"/>
+        <prov:wasDerivedFrom rdf:resource="https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf"/>
+        <prov:wasInfluencedBy rdf:resource="https://doi.org/10.3233/SW-150175"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#completeness -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#completeness">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:definition xml:lang="en">Completeness refers to the extent to which all information required for a particular context of use is present.</skos:definition>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#externalCompleteness"/>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#internalCompleteness"/>
+        <skos:prefLabel xml:lang="en">Completeness</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#intrinsicDimensions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#compliance -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#compliance">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#accuracy"/>
+        <skos:definition xml:lang="en">Compliance refers to the degree to which the dataset conforms to rules and guidelines established for the employed data description language and, where applicable, the associated data model.</skos:definition>
+        <skos:example xml:lang="en">The guidelines for recording cultural heritage data may require photographs&apos; dimensions to be given in cm.</skos:example>
+        <skos:example xml:lang="en">The internationally recognized ISO 8601 standard prescribes the date format YYYY-MM-DD.</skos:example>
+        <skos:prefLabel xml:lang="en">Compliance</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#intrinsicDimensions"/>
+        <prov:hadPrimarySource rdf:resource="https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf"/>
+        <prov:hadPrimarySource rdf:resource="https://www.iso.org/standard/35736.html"/>
+        <prov:wasDerivedFrom rdf:resource="https://doi.org/10.1145/1012453.1012461"/>
+        <prov:wasDerivedFrom rdf:resource="https://doi.org/10.3233/SW-150175"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#conciseness -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#conciseness">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:definition xml:lang="en">Conciseness reflects the degree to which a dataset presents essential information efficiently.</skos:definition>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#compactness"/>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#relevance"/>
+        <skos:prefLabel xml:lang="en">Conciseness</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#intrinsicDimensions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#confidentiality -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#confidentiality">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#accessibility"/>
+        <skos:definition xml:lang="en">Confidentiality refers to the restriction of access to authorized users only, ensuring that sensitive data is protected according to the requirements of a given context of use.</skos:definition>
+        <skos:example xml:lang="en">Certain information, such as the owner&apos;s name of an object form, may be crucial for provenance tracking in a museum but must be hidden during data export to protect privacy.</skos:example>
+        <skos:example xml:lang="en">Role-based access control is often applied to data collections. For example, new staff may be permitted to edit newly entered data, whereas editors have write access to all the data within a collection.</skos:example>
+        <skos:prefLabel xml:lang="en">Confidentiality</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#contextualDimensions"/>
+        <prov:hadPrimarySource rdf:resource="https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf"/>
+        <prov:hadPrimarySource rdf:resource="https://www.iso.org/standard/35736.html"/>
+        <prov:wasDerivedFrom rdf:resource="https://doi.org/10.3233/SW-150175"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#consistency -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#consistency">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:definition xml:lang="en">Consistency refers to the uniformity of information within a dataset without internal conflicts.</skos:definition>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#coherence"/>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#logicalConsistency"/>
+        <skos:prefLabel xml:lang="en">Consistency</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#intrinsicDimensions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#contextualDimensions -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#contextualDimensions">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Category"/>
+        <skos:prefLabel xml:lang="en">Contextual Dimensions</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#currency -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#currency">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:definition xml:lang="en">Currency refers to the extent to which a dataset reflects up-to-date information from the domain of interest.</skos:definition>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#dataCurrency"/>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#dataUpdateCurrency"/>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#timeConcurrency"/>
+        <skos:prefLabel xml:lang="en">Currency</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#contextualDimensions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#dataCurrency -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#dataCurrency">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#currency"/>
+        <skos:definition xml:lang="en">Data Currency refers to the degree to which a dataset contains up-to-date information relevant to the domain of interest.</skos:definition>
+        <skos:example xml:lang="en">Paintings can change ownership at auctions. To accurately determine the current location of an artist&apos;s paintings, the data must always be up-to-date.</skos:example>
+        <skos:prefLabel xml:lang="en">Data Currency</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#contextualDimensions"/>
+        <prov:hadPrimarySource rdf:resource="https://doi.org/10.3233/SW-150175"/>
+        <prov:hadPrimarySource rdf:resource="https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf"/>
+        <prov:hadPrimarySource rdf:resource="https://www.iso.org/standard/35736.html"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#dataUpdateCurrency -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#dataUpdateCurrency">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#currency"/>
+        <skos:definition xml:lang="en">Data Update Currency refers to the degree to which a dataset is updated promptly after information in a domain of interest has changed.</skos:definition>
+        <skos:example xml:lang="en">Museum inventories are conducted periodically and may reveal discrepancies with existing data. The closer an inventory is performed relative to changes in holdings, the more current the data.</skos:example>
+        <skos:example xml:lang="en">Natural dynamics, such as the tilt of the Leaning Tower of Pisa, are monitored regularly. The more recent the measurements, the more accurately the data reflects the current state.</skos:example>
+        <skos:prefLabel xml:lang="en">Data Update Currency</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#contextualDimensions"/>
+        <prov:hadPrimarySource rdf:resource="https://doi.org/10.1145/1012453.1012461"/>
+        <prov:hadPrimarySource rdf:resource="https://doi.org/10.1145/240455.240479"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#externalAccuracy -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#externalAccuracy">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#accuracy"/>
+        <skos:definition xml:lang="en">External Accuracy refers to the degree to which all interlinks in a dataset are valid and refer to the intended data elements in external datasets.</skos:definition>
+        <skos:example xml:lang="en">A link to an artwork type is accurate if the type is as specific as possible. Typical registers such as the controlled vocabulary Art &amp; Architecture Thesaurus (AAT) capture multidimensional relationships and provide links to general and more specific entries.</skos:example>
+        <skos:example xml:lang="en">A place of birth may be indicated by a name, which should ideally be accompanied by a link to a location register. For external accuracy, this link must be valid and resolvable.</skos:example>
+        <skos:prefLabel xml:lang="en">External Accuracy</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#intrinsicDimensions"/>
+        <prov:wasDerivedFrom rdf:resource="https://doi.org/10.3233/SW-150175"/>
+        <prov:wasInfluencedBy rdf:resource="https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#externalCompleteness -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#externalCompleteness">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#completeness"/>
+        <skos:definition xml:lang="en">External Completeness refers to the degree to which a dataset contains all interlinks to external datasets that are required for a particular context of use.</skos:definition>
+        <skos:example xml:lang="en">To avoid ambiguity, each place of birth should be indicated by a valid link to a specific location register, such as GeoNames.</skos:example>
+        <skos:prefLabel xml:lang="en">External Completeness</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#intrinsicDimensions"/>
+        <prov:hadPrimarySource rdf:resource="https://doi.org/10.3233/SW-150175"/>
+        <prov:wasInfluencedBy rdf:resource="https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf"/>
+        <prov:wasInfluencedBy rdf:resource="https://www.iso.org/standard/35736.html"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#integrity -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#integrity">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#accessibility"/>
+        <skos:definition xml:lang="en">Integrity refers to the degree to which data remains free from unintentional or unauthorized alterations, preserving its intended state over time.</skos:definition>
+        <skos:example xml:lang="en">Techniques such as digital signatures and cryptographic hashes can be employed to verify the authenticity of data changes, thereby distinguishing authorized changes from unauthorized or accidental alterations.</skos:example>
+        <skos:prefLabel xml:lang="en">Integrity</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#contextualDimensions"/>
+        <prov:hadPrimarySource rdf:resource="https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf"/>
+        <prov:wasDerivedFrom rdf:resource="https://doi.org/10.1145/3362121"/>
+        <prov:wasDerivedFrom rdf:resource="https://doi.org/10.3233/SW-150175"/>
+        <prov:wasDerivedFrom rdf:resource="https://www.iso.org/standard/35736.html"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#internalCompleteness -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#internalCompleteness">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#completeness"/>
+        <skos:definition xml:lang="en">Internal Completeness refers to the degree to which a dataset contains all data elements of the domain of interest required for a particular context of use, and each of those data elements includes the properties and links required for the intended context of use.</skos:definition>
+        <skos:example xml:lang="en">In a register of paintings, all paintings created by a particular artist must be included to create a chronological overview of the artist&apos;s work.</skos:example>
+        <skos:example xml:lang="en">To determine the century in which a person lived, the year of birth may be sufficient. However, assigning a zodiac sign or software-based verification to disambiguating persons with the identical names typically requires the full date of birth.</skos:example>
+        <skos:prefLabel xml:lang="en">Internal Completeness</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#intrinsicDimensions"/>
+        <prov:hadPrimarySource rdf:resource="https://doi.org/10.1145/1012453.1012461"/>
+        <prov:hadPrimarySource rdf:resource="https://doi.org/10.1145/1541880.1541883"/>
+        <prov:hadPrimarySource rdf:resource="https://doi.org/10.1145/240455.240479"/>
+        <prov:hadPrimarySource rdf:resource="https://doi.org/10.3233/SW-150175"/>
+        <prov:hadPrimarySource rdf:resource="https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf"/>
+        <prov:hadPrimarySource rdf:resource="https://www.iso.org/standard/35736.html"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#intrinsicDimensions -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#intrinsicDimensions">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Category"/>
+        <skos:prefLabel xml:lang="en">Intrinsic Dimensions</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#logicalConsistency -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#logicalConsistency">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#consistency"/>
+        <skos:definition xml:lang="en">Logical Consistency refers to the degree to which a dataset is free from logical contradictions within a given domain of interest and context of use.</skos:definition>
+        <skos:example xml:lang="en">The date of a person&apos;s death must not precede their date of birth; any violation constitutes a logical contradiction.</skos:example>
+        <skos:prefLabel xml:lang="en">Logical Consistency</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#intrinsicDimensions"/>
+        <prov:hadPrimarySource rdf:resource="https://doi.org/10.1145/1541880.1541883"/>
+        <prov:hadPrimarySource rdf:resource="https://doi.org/10.3233/SW-150175"/>
+        <prov:hadPrimarySource rdf:resource="https://www.iso.org/standard/35736.html"/>
+        <prov:wasDerivedFrom rdf:resource="https://doi.org/10.1145/1012453.1012461"/>
+        <prov:wasDerivedFrom rdf:resource="https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#plausibility -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#plausibility">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:definition xml:lang="en">Plausibility refers to the degree to which information can be considered credible.</skos:definition>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#provenance"/>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#trustworthiness"/>
+        <skos:prefLabel xml:lang="en">Plausibility</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#contextualDimensions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#precision -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#precision">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#accuracy"/>
+        <skos:definition xml:lang="en">Precision of a dataset refers to the degree of exactness of recorded data values, evaluated with respect to the requirements of a particular context of use.</skos:definition>
+        <skos:example xml:lang="en">The required level of precision depends on the object and context. The height of the Burj Khalifa, for instance, can typically be reported in meters, which is sufficient to identify it as the tallest building. In contrast, the dimensions of a print sheet are commonly recorded in millimeters, often supplemented by precise plate measurements for greater accuracy.</skos:example>
+        <skos:prefLabel xml:lang="en">Precision</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#intrinsicDimensions"/>
+        <prov:hadPrimarySource rdf:resource="https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf"/>
+        <prov:hadPrimarySource rdf:resource="https://www.iso.org/standard/35736.html"/>
+        <prov:wasDerivedFrom rdf:resource="https://doi.org/10.1145/1541880.1541883"/>
+        <prov:wasInfluencedBy rdf:resource="https://doi.org/10.1145/240455.240479"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#provenance -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#provenance">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#plausibility"/>
+        <skos:definition xml:lang="en">Provenance refers to the degree to which a dataset, including its elements and values, are equipped with verifiable information about its origin.</skos:definition>
+        <skos:example xml:lang="en">A death certificate cited as the source for a person&apos;s date of death provides verifiable evidence, enhancing the plausibility of the data.</skos:example>
+        <skos:prefLabel xml:lang="en">Provenance</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#contextualDimensions"/>
+        <prov:hadPrimarySource rdf:resource="https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf"/>
+        <prov:wasDerivedFrom rdf:resource="https://doi.org/10.1145/3362121"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#relevance -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#relevance">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#conciseness"/>
+        <skos:definition xml:lang="en">Relevance refers to the degree to which a dataset contains only those data elements, links and properties required for a particular context of use.</skos:definition>
+        <skos:example xml:lang="en">In the metadata for a painting, specifying the artist of the painting is relevant. In contrast, including extraneous personal information about the artist, such as details of their clothing, is irrelevant for the purpose of describing the artwork.</skos:example>
+        <skos:prefLabel xml:lang="en">Relevance</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#intrinsicDimensions"/>
+        <prov:hadPrimarySource rdf:resource="https://doi.org/10.3233/SW-150175"/>
+        <prov:hadPrimarySource rdf:resource="https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#semanticAccuracy -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#semanticAccuracy">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#accuracy"/>
+        <skos:definition xml:lang="en">Semantic Accuracy refers to the degree to which the dataset correctly represents information of the domain of interest.</skos:definition>
+        <skos:example xml:lang="en">If a building can be attributed with a date, it depends on the description in the data model what kind of date it is. For instance, recording the foundation date of a church when the model specifies the completion date would be semantically inaccurate.</skos:example>
+        <skos:example xml:lang="en">The Mona Lisa is a painting by Leonardo da Vinci. Attributing the painting to the artist Pablo Picasso would be semantically inaccurate.</skos:example>
+        <skos:prefLabel xml:lang="en">Semantic Accuracy</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#intrinsicDimensions"/>
+        <prov:hadPrimarySource rdf:resource="https://doi.org/10.1145/240455.240479"/>
+        <prov:hadPrimarySource rdf:resource="https://doi.org/10.3233/SW-150175"/>
+        <prov:hadPrimarySource rdf:resource="https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf"/>
+        <prov:hadPrimarySource rdf:resource="https://www.iso.org/standard/35736.html"/>
+        <prov:wasDerivedFrom rdf:resource="https://doi.org/10.1145/1012453.1012461"/>
+        <prov:wasInfluencedBy rdf:resource="https://doi.org/10.1145/1541880.1541883"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#syntacticAccuracy -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#syntacticAccuracy">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#accuracy"/>
+        <skos:definition xml:lang="en">Syntactic Accuracy refers to the degree to which the dataset conforms to the syntax of the employed data description language and, where applicable, the associated data model.</skos:definition>
+        <skos:example xml:lang="en">In the cultural heritage context, LIDO data should conform to the XML data description language and to the LIDO data model to be syntactically correct.</skos:example>
+        <skos:prefLabel xml:lang="en">Syntactic Accuracy</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#intrinsicDimensions"/>
+        <prov:hadPrimarySource rdf:resource="https://doi.org/10.1145/1012453.1012461"/>
+        <prov:hadPrimarySource rdf:resource="https://doi.org/10.1145/1541880.1541883"/>
+        <prov:hadPrimarySource rdf:resource="https://doi.org/10.3233/SW-150175"/>
+        <prov:hadPrimarySource rdf:resource="https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf"/>
+        <prov:wasDerivedFrom rdf:resource="https://www.iso.org/standard/35736.html"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#temporalTraceability -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#temporalTraceability">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#traceability"/>
+        <skos:definition xml:lang="en">Temporal Traceability is the degree to which a dataset has an audit trail of access and a history of changes within a particular context of use.</skos:definition>
+        <skos:example xml:lang="en">Historic buildings are typically dynamic in nature. All changes, additions, and demolitions to a building should be recorded in a detailed history of change to maintain temporal traceability.</skos:example>
+        <skos:prefLabel xml:lang="en">Temporal Traceability</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#contextualDimensions"/>
+        <prov:hadPrimarySource rdf:resource="https://www.iso.org/standard/35736.html"/>
+        <prov:wasDerivedFrom rdf:resource="https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#timeConcurrency -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#timeConcurrency">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#currency"/>
+        <skos:definition xml:lang="en">Time Concurrency assesses whether all data elements, including their values and links, refer consistently to the same version of information in the domain.</skos:definition>
+        <skos:example xml:lang="en">In a museum, paintings may be relocated as part of an exhibition. If some paintings&apos; location data are already updated to the current exhibition, while others remain outdated, the data lacks time concurrency, resulting in inconsistent representation of the exhibition.</skos:example>
+        <skos:prefLabel xml:lang="en">Time Concurrency</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#contextualDimensions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#traceability -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#traceability">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:definition xml:lang="en">Traceability refers to the availability of information regarding changes of data over time.</skos:definition>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#causalTraceability"/>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#temporalTraceability"/>
+        <skos:prefLabel xml:lang="en">Traceability</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#contextualDimensions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#trustworthiness -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#trustworthiness">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#plausibility"/>
+        <skos:definition xml:lang="en">Trustworthiness refers to the degree to which a dataset, including its elements and values, are believed by a relevant community within a specific context of use.</skos:definition>
+        <skos:example xml:lang="en">Cultural heritage information published by a reputable museum about an object in its possession is generally more trustworthy than information in tourist promotional material, as the museum is recognized for its expertise and responsible handling of information.</skos:example>
+        <skos:example xml:lang="en">Similarly, the reputation, education, and experience of the data contributor influence trustworthiness.</skos:example>
+        <skos:prefLabel xml:lang="en">Trustworthiness</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#contextualDimensions"/>
+        <prov:hadPrimarySource rdf:resource="https://doi.org/10.3233/SW-150175"/>
+        <prov:hadPrimarySource rdf:resource="https://www.iso.org/standard/35736.html"/>
+        <prov:wasDerivedFrom rdf:resource="https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#understandability -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#understandability">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:definition xml:lang="en">Understandability refers to the ease with which data can be comprehended and processed by users, including both humans and tools.</skos:definition>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#appropriateness"/>
+        <skos:narrower rdf:resource="https://w3id.org/dqvch#versatility"/>
+        <skos:prefLabel xml:lang="en">Understandability</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#contextualDimensions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/dqvch#versatility -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/dqvch#versatility">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dqv#Dimension"/>
+        <skos:broader rdf:resource="https://w3id.org/dqvch#understandability"/>
+        <skos:definition xml:lang="en">Versatility refers to the extent to which data is available in different forms across different cultural perspectives, technology platforms, and user sensory abilities.</skos:definition>
+        <skos:example xml:lang="en">Historical dates prior to 1582 require distinguishing between the Julian and Gregorian calendars. Providing data in multiple formats or adhering to ISO 8601 can prevent misinterpretation and enhance versatility.</skos:example>
+        <skos:example xml:lang="en">Measurements in the metric system are easily understood in Europe but may be less intuitive for US Americans.</skos:example>
+        <skos:example xml:lang="en">The date of New Year&apos;s celebration varies between the Gregorian and lunar calendars, necessitating contextual clarification.</skos:example>
+        <skos:prefLabel xml:lang="en">Versatility</skos:prefLabel>
+        <dqv:inCategory rdf:resource="https://w3id.org/dqvch#contextualDimensions"/>
+        <prov:hadPrimarySource rdf:resource="https://doi.org/10.1145/3362121"/>
+        <prov:hadPrimarySource rdf:resource="https://www.iso.org/standard/35736.html"/>
+        <prov:wasDerivedFrom rdf:resource="https://doi.org/10.3233/SW-150175"/>
+        <prov:wasDerivedFrom rdf:resource="https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

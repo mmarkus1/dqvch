@@ -1,0 +1,498 @@
+@prefix : <https://w3id.org/dqvch#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/dqvch#> .
+
+<https://w3id.org/dqvch#> rdf:type owl:Ontology ;
+                           rdfs:comment "A vocabulary of data quality dimensions for descriptive information about cultural heritage objects, modelled using W3C DQV."@en ;
+                           rdfs:label "Data Quality Vocabulary for Cultural Heritage (dqvch)"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#broader
+<http://www.w3.org/2004/02/skos/core#broader> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+<http://www.w3.org/2004/02/skos/core#narrower> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dqv#inCategory
+<http://www.w3.org/ns/dqv#inCategory> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#hadPrimarySource
+<http://www.w3.org/ns/prov#hadPrimarySource> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+<http://www.w3.org/ns/prov#wasDerivedFrom> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#wasInfluencedBy
+<http://www.w3.org/ns/prov#wasInfluencedBy> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/dqv#Category
+<http://www.w3.org/ns/dqv#Category> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dqv#Dimension
+<http://www.w3.org/ns/dqv#Dimension> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/dqvch#accessibility
+:accessibility rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/ns/dqv#Dimension> ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Accessibility refers to additional information that govern access to data."@en ;
+               <http://www.w3.org/2004/02/skos/core#narrower> :availability ,
+                                                              :confidentiality ,
+                                                              :integrity ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "Accessibility"@en ;
+               <http://www.w3.org/ns/dqv#inCategory> :contextualDimensions .
+
+
+###  https://w3id.org/dqvch#accuracy
+:accuracy rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/ns/dqv#Dimension> ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Accuracy captures the degree to which a dataset correctly and precisely represents information, in accordance with defined standards."@en ;
+          <http://www.w3.org/2004/02/skos/core#narrower> :compliance ,
+                                                         :externalAccuracy ,
+                                                         :precision ,
+                                                         :semanticAccuracy ,
+                                                         :syntacticAccuracy ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "Accuracy"@en ;
+          <http://www.w3.org/ns/dqv#inCategory> :intrinsicDimensions .
+
+
+###  https://w3id.org/dqvch#appropriateness
+:appropriateness rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/ns/dqv#Dimension> ;
+                 <http://www.w3.org/2004/02/skos/core#broader> :understandability ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Appropriateness refers to the ease with which data can be understood without ambiguity within a given context of use."@en ;
+                 <http://www.w3.org/2004/02/skos/core#example> "The city name 'London' as a birthplace may be ambiguous and can lead to misunderstandings, as there are multiple cities with that name in different countries. Providing geolocations or references to a location register reduces ambiguity and increase understanding."@en ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Appropriateness"@en ;
+                 <http://www.w3.org/ns/dqv#inCategory> :contextualDimensions ;
+                 <http://www.w3.org/ns/prov#hadPrimarySource> <https://doi.org/10.3233/SW-150175> ,
+                                                              <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ,
+                                                              <https://www.iso.org/standard/35736.html> .
+
+
+###  https://w3id.org/dqvch#availability
+:availability rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/ns/dqv#Dimension> ;
+              <http://www.w3.org/2004/02/skos/core#broader> :accessibility ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Availability is the degree to which data can be accessed when required for a given context of use."@en ;
+              <http://www.w3.org/2004/02/skos/core#example> "Accessing a resource through a website enhances its availability. Specifying a unique and persistent identifier, such as a Digital Object Identifier (DOI), further improves availability by ensuring that an organization is responsible for maintaining the resource's integrity and long-term accessibility."@en ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "Availability"@en ;
+              <http://www.w3.org/ns/dqv#inCategory> :contextualDimensions ;
+              <http://www.w3.org/ns/prov#hadPrimarySource> <https://doi.org/10.3233/SW-150175> ,
+                                                           <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ;
+              <http://www.w3.org/ns/prov#wasDerivedFrom> <https://doi.org/10.1145/240455.240479> ,
+                                                         <https://www.iso.org/standard/35736.html> .
+
+
+###  https://w3id.org/dqvch#causalTraceability
+:causalTraceability rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/ns/dqv#Dimension> ;
+                    <http://www.w3.org/2004/02/skos/core#broader> :traceability ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "Causal Traceability is the degree to which causal dependencies among dataset updates are documented and accessible for a given context of use."@en ;
+                    <http://www.w3.org/2004/02/skos/core#example> "Changes to a historic building may trigger updates to related data, such as the group of architects responsible for modifications of the building. In this context, sculptures may have been relocated due to change."@en ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Causal Traceability"@en ;
+                    <http://www.w3.org/ns/dqv#inCategory> :contextualDimensions ;
+                    <http://www.w3.org/ns/prov#wasDerivedFrom> <https://doi.org/10.1145/3362121> .
+
+
+###  https://w3id.org/dqvch#coherence
+:coherence rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/ns/dqv#Dimension> ;
+           <http://www.w3.org/2004/02/skos/core#broader> :consistency ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Coherence refers to the degree to which the dataset contains coherent data elements. Two data elements are coherent if their respective properties and links are coherent in pairs. Two properties are coherent if their data values are the same when representing the same information. Two links are coherent if they refer to the same element when representing the same information. Two data values are coherent if similar information is expressed in a consistent format."@en ;
+           <http://www.w3.org/2004/02/skos/core#example> "Each city should be represented by a single data element, ensuring that all links to that city are unambiguous."@en ,
+                                                         "In a dataset of photograph metadata, all elements are coherent if measurements for width and height are specified consistently across records."@en ,
+                                                         "Location name London must be unambiguous for cities; This can be achieved, e.g., by a suffix such as London (United Kingdom)."@en ,
+                                                         "Measurement values are coherent if their formats are identical. For example, integers should be consistently represented without leading zeros."@en ,
+                                                         "Width and height values should use the same units, such as cm, for all elements."@en ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "Coherence"@en ;
+           <http://www.w3.org/ns/dqv#inCategory> :intrinsicDimensions ;
+           <http://www.w3.org/ns/prov#hadPrimarySource> <https://doi.org/10.3233/SW-150175> ,
+                                                        <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ,
+                                                        <https://www.iso.org/standard/35736.html> ;
+           <http://www.w3.org/ns/prov#wasDerivedFrom> <https://doi.org/10.1145/1012453.1012461> ,
+                                                      <https://doi.org/10.1145/1541880.1541883> ,
+                                                      <https://doi.org/10.1145/240455.240479> .
+
+
+###  https://w3id.org/dqvch#compactness
+:compactness rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/ns/dqv#Dimension> ;
+             <http://www.w3.org/2004/02/skos/core#broader> :conciseness ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Compactness refers to the degree to which a dataset contains no redundant elements and all elements are compact. A data element is compact if it does not contain redundant links or properties. A data value is compact if it is as condensed as possible."@en ;
+             <http://www.w3.org/2004/02/skos/core#example> "A data element that specifies the size of a photograph is compact if it includes only the relevant measurement (e.g., the size of photograph itself) without redundant information (e.g., the frame size, unless contextually required)."@en ,
+                                                           "A data value for the width of a photograph is compact if it is expressed in a concise numeric form, without unnecessary leading zeros."@en ,
+                                                           "A dataset of paintings from an exhibition is compact if it does not contain multiple elements describing the same painting."@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Compactness"@en ;
+             <http://www.w3.org/ns/dqv#inCategory> :intrinsicDimensions ;
+             <http://www.w3.org/ns/prov#hadPrimarySource> <https://www.iso.org/standard/35736.html> ;
+             <http://www.w3.org/ns/prov#wasDerivedFrom> <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ;
+             <http://www.w3.org/ns/prov#wasInfluencedBy> <https://doi.org/10.3233/SW-150175> .
+
+
+###  https://w3id.org/dqvch#completeness
+:completeness rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/ns/dqv#Dimension> ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Completeness refers to the extent to which all information required for a particular context of use is present."@en ;
+              <http://www.w3.org/2004/02/skos/core#narrower> :externalCompleteness ,
+                                                             :internalCompleteness ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "Completeness"@en ;
+              <http://www.w3.org/ns/dqv#inCategory> :intrinsicDimensions .
+
+
+###  https://w3id.org/dqvch#compliance
+:compliance rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/ns/dqv#Dimension> ;
+            <http://www.w3.org/2004/02/skos/core#broader> :accuracy ;
+            <http://www.w3.org/2004/02/skos/core#definition> "Compliance refers to the degree to which the dataset conforms to rules and guidelines established for the employed data description language and, where applicable, the associated data model."@en ;
+            <http://www.w3.org/2004/02/skos/core#example> "The guidelines for recording cultural heritage data may require photographs' dimensions to be given in cm."@en ,
+                                                          "The internationally recognized ISO 8601 standard prescribes the date format YYYY-MM-DD."@en ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "Compliance"@en ;
+            <http://www.w3.org/ns/dqv#inCategory> :intrinsicDimensions ;
+            <http://www.w3.org/ns/prov#hadPrimarySource> <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ,
+                                                         <https://www.iso.org/standard/35736.html> ;
+            <http://www.w3.org/ns/prov#wasDerivedFrom> <https://doi.org/10.1145/1012453.1012461> ,
+                                                       <https://doi.org/10.3233/SW-150175> .
+
+
+###  https://w3id.org/dqvch#conciseness
+:conciseness rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/ns/dqv#Dimension> ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Conciseness reflects the degree to which a dataset presents essential information efficiently."@en ;
+             <http://www.w3.org/2004/02/skos/core#narrower> :compactness ,
+                                                            :relevance ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Conciseness"@en ;
+             <http://www.w3.org/ns/dqv#inCategory> :intrinsicDimensions .
+
+
+###  https://w3id.org/dqvch#confidentiality
+:confidentiality rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/ns/dqv#Dimension> ;
+                 <http://www.w3.org/2004/02/skos/core#broader> :accessibility ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Confidentiality refers to the restriction of access to authorized users only, ensuring that sensitive data is protected according to the requirements of a given context of use."@en ;
+                 <http://www.w3.org/2004/02/skos/core#example> "Certain information, such as the owner's name of an object form, may be crucial for provenance tracking in a museum but must be hidden during data export to protect privacy."@en ,
+                                                               "Role-based access control is often applied to data collections. For example, new staff may be permitted to edit newly entered data, whereas editors have write access to all the data within a collection."@en ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Confidentiality"@en ;
+                 <http://www.w3.org/ns/dqv#inCategory> :contextualDimensions ;
+                 <http://www.w3.org/ns/prov#hadPrimarySource> <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ,
+                                                              <https://www.iso.org/standard/35736.html> ;
+                 <http://www.w3.org/ns/prov#wasDerivedFrom> <https://doi.org/10.3233/SW-150175> .
+
+
+###  https://w3id.org/dqvch#consistency
+:consistency rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/ns/dqv#Dimension> ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Consistency refers to the uniformity of information within a dataset without internal conflicts."@en ;
+             <http://www.w3.org/2004/02/skos/core#narrower> :coherence ,
+                                                            :logicalConsistency ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Consistency"@en ;
+             <http://www.w3.org/ns/dqv#inCategory> :intrinsicDimensions .
+
+
+###  https://w3id.org/dqvch#contextualDimensions
+:contextualDimensions rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/ns/dqv#Category> ;
+                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Contextual Dimensions"@en .
+
+
+###  https://w3id.org/dqvch#currency
+:currency rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/ns/dqv#Dimension> ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Currency refers to the extent to which a dataset reflects up-to-date information from the domain of interest."@en ;
+          <http://www.w3.org/2004/02/skos/core#narrower> :dataCurrency ,
+                                                         :dataUpdateCurrency ,
+                                                         :timeConcurrency ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "Currency"@en ;
+          <http://www.w3.org/ns/dqv#inCategory> :contextualDimensions .
+
+
+###  https://w3id.org/dqvch#dataCurrency
+:dataCurrency rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/ns/dqv#Dimension> ;
+              <http://www.w3.org/2004/02/skos/core#broader> :currency ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Data Currency refers to the degree to which a dataset contains up-to-date information relevant to the domain of interest."@en ;
+              <http://www.w3.org/2004/02/skos/core#example> "Paintings can change ownership at auctions. To accurately determine the current location of an artist's paintings, the data must always be up-to-date."@en ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "Data Currency"@en ;
+              <http://www.w3.org/ns/dqv#inCategory> :contextualDimensions ;
+              <http://www.w3.org/ns/prov#hadPrimarySource> <https://doi.org/10.3233/SW-150175> ,
+                                                           <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ,
+                                                           <https://www.iso.org/standard/35736.html> .
+
+
+###  https://w3id.org/dqvch#dataUpdateCurrency
+:dataUpdateCurrency rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/ns/dqv#Dimension> ;
+                    <http://www.w3.org/2004/02/skos/core#broader> :currency ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "Data Update Currency refers to the degree to which a dataset is updated promptly after information in a domain of interest has changed."@en ;
+                    <http://www.w3.org/2004/02/skos/core#example> "Museum inventories are conducted periodically and may reveal discrepancies with existing data. The closer an inventory is performed relative to changes in holdings, the more current the data."@en ,
+                                                                  "Natural dynamics, such as the tilt of the Leaning Tower of Pisa, are monitored regularly. The more recent the measurements, the more accurately the data reflects the current state."@en ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Data Update Currency"@en ;
+                    <http://www.w3.org/ns/dqv#inCategory> :contextualDimensions ;
+                    <http://www.w3.org/ns/prov#hadPrimarySource> <https://doi.org/10.1145/1012453.1012461> ,
+                                                                 <https://doi.org/10.1145/240455.240479> .
+
+
+###  https://w3id.org/dqvch#externalAccuracy
+:externalAccuracy rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/ns/dqv#Dimension> ;
+                  <http://www.w3.org/2004/02/skos/core#broader> :accuracy ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "External Accuracy refers to the degree to which all interlinks in a dataset are valid and refer to the intended data elements in external datasets."@en ;
+                  <http://www.w3.org/2004/02/skos/core#example> "A link to an artwork type is accurate if the type is as specific as possible. Typical registers such as the controlled vocabulary Art & Architecture Thesaurus (AAT) capture multidimensional relationships and provide links to general and more specific entries."@en ,
+                                                                "A place of birth may be indicated by a name, which should ideally be accompanied by a link to a location register. For external accuracy, this link must be valid and resolvable."@en ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "External Accuracy"@en ;
+                  <http://www.w3.org/ns/dqv#inCategory> :intrinsicDimensions ;
+                  <http://www.w3.org/ns/prov#wasDerivedFrom> <https://doi.org/10.3233/SW-150175> ;
+                  <http://www.w3.org/ns/prov#wasInfluencedBy> <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> .
+
+
+###  https://w3id.org/dqvch#externalCompleteness
+:externalCompleteness rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/ns/dqv#Dimension> ;
+                      <http://www.w3.org/2004/02/skos/core#broader> :completeness ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "External Completeness refers to the degree to which a dataset contains all interlinks to external datasets that are required for a particular context of use."@en ;
+                      <http://www.w3.org/2004/02/skos/core#example> "To avoid ambiguity, each place of birth should be indicated by a valid link to a specific location register, such as GeoNames."@en ;
+                      <http://www.w3.org/2004/02/skos/core#prefLabel> "External Completeness"@en ;
+                      <http://www.w3.org/ns/dqv#inCategory> :intrinsicDimensions ;
+                      <http://www.w3.org/ns/prov#hadPrimarySource> <https://doi.org/10.3233/SW-150175> ;
+                      <http://www.w3.org/ns/prov#wasInfluencedBy> <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ,
+                                                                  <https://www.iso.org/standard/35736.html> .
+
+
+###  https://w3id.org/dqvch#integrity
+:integrity rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/ns/dqv#Dimension> ;
+           <http://www.w3.org/2004/02/skos/core#broader> :accessibility ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Integrity refers to the degree to which data remains free from unintentional or unauthorized alterations, preserving its intended state over time."@en ;
+           <http://www.w3.org/2004/02/skos/core#example> "Techniques such as digital signatures and cryptographic hashes can be employed to verify the authenticity of data changes, thereby distinguishing authorized changes from unauthorized or accidental alterations."@en ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "Integrity"@en ;
+           <http://www.w3.org/ns/dqv#inCategory> :contextualDimensions ;
+           <http://www.w3.org/ns/prov#hadPrimarySource> <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ;
+           <http://www.w3.org/ns/prov#wasDerivedFrom> <https://doi.org/10.1145/3362121> ,
+                                                      <https://doi.org/10.3233/SW-150175> ,
+                                                      <https://www.iso.org/standard/35736.html> .
+
+
+###  https://w3id.org/dqvch#internalCompleteness
+:internalCompleteness rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/ns/dqv#Dimension> ;
+                      <http://www.w3.org/2004/02/skos/core#broader> :completeness ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "Internal Completeness refers to the degree to which a dataset contains all data elements of the domain of interest required for a particular context of use, and each of those data elements includes the properties and links required for the intended context of use."@en ;
+                      <http://www.w3.org/2004/02/skos/core#example> "In a register of paintings, all paintings created by a particular artist must be included to create a chronological overview of the artist's work."@en ,
+                                                                    "To determine the century in which a person lived, the year of birth may be sufficient. However, assigning a zodiac sign or software-based verification to disambiguating persons with the identical names typically requires the full date of birth."@en ;
+                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Internal Completeness"@en ;
+                      <http://www.w3.org/ns/dqv#inCategory> :intrinsicDimensions ;
+                      <http://www.w3.org/ns/prov#hadPrimarySource> <https://doi.org/10.1145/1012453.1012461> ,
+                                                                   <https://doi.org/10.1145/1541880.1541883> ,
+                                                                   <https://doi.org/10.1145/240455.240479> ,
+                                                                   <https://doi.org/10.3233/SW-150175> ,
+                                                                   <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ,
+                                                                   <https://www.iso.org/standard/35736.html> .
+
+
+###  https://w3id.org/dqvch#intrinsicDimensions
+:intrinsicDimensions rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/ns/dqv#Category> ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Intrinsic Dimensions"@en .
+
+
+###  https://w3id.org/dqvch#logicalConsistency
+:logicalConsistency rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/ns/dqv#Dimension> ;
+                    <http://www.w3.org/2004/02/skos/core#broader> :consistency ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "Logical Consistency refers to the degree to which a dataset is free from logical contradictions within a given domain of interest and context of use."@en ;
+                    <http://www.w3.org/2004/02/skos/core#example> "The date of a person's death must not precede their date of birth; any violation constitutes a logical contradiction."@en ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Logical Consistency"@en ;
+                    <http://www.w3.org/ns/dqv#inCategory> :intrinsicDimensions ;
+                    <http://www.w3.org/ns/prov#hadPrimarySource> <https://doi.org/10.1145/1541880.1541883> ,
+                                                                 <https://doi.org/10.3233/SW-150175> ,
+                                                                 <https://www.iso.org/standard/35736.html> ;
+                    <http://www.w3.org/ns/prov#wasDerivedFrom> <https://doi.org/10.1145/1012453.1012461> ,
+                                                               <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> .
+
+
+###  https://w3id.org/dqvch#plausibility
+:plausibility rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/ns/dqv#Dimension> ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Plausibility refers to the degree to which information can be considered credible."@en ;
+              <http://www.w3.org/2004/02/skos/core#narrower> :provenance ,
+                                                             :trustworthiness ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "Plausibility"@en ;
+              <http://www.w3.org/ns/dqv#inCategory> :contextualDimensions .
+
+
+###  https://w3id.org/dqvch#precision
+:precision rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/ns/dqv#Dimension> ;
+           <http://www.w3.org/2004/02/skos/core#broader> :accuracy ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Precision of a dataset refers to the degree of exactness of recorded data values, evaluated with respect to the requirements of a particular context of use."@en ;
+           <http://www.w3.org/2004/02/skos/core#example> "The required level of precision depends on the object and context. The height of the Burj Khalifa, for instance, can typically be reported in meters, which is sufficient to identify it as the tallest building. In contrast, the dimensions of a print sheet are commonly recorded in millimeters, often supplemented by precise plate measurements for greater accuracy."@en ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "Precision"@en ;
+           <http://www.w3.org/ns/dqv#inCategory> :intrinsicDimensions ;
+           <http://www.w3.org/ns/prov#hadPrimarySource> <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ,
+                                                        <https://www.iso.org/standard/35736.html> ;
+           <http://www.w3.org/ns/prov#wasDerivedFrom> <https://doi.org/10.1145/1541880.1541883> ;
+           <http://www.w3.org/ns/prov#wasInfluencedBy> <https://doi.org/10.1145/240455.240479> .
+
+
+###  https://w3id.org/dqvch#provenance
+:provenance rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/ns/dqv#Dimension> ;
+            <http://www.w3.org/2004/02/skos/core#broader> :plausibility ;
+            <http://www.w3.org/2004/02/skos/core#definition> "Provenance refers to the degree to which a dataset, including its elements and values, are equipped with verifiable information about its origin."@en ;
+            <http://www.w3.org/2004/02/skos/core#example> "A death certificate cited as the source for a person's date of death provides verifiable evidence, enhancing the plausibility of the data."@en ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "Provenance"@en ;
+            <http://www.w3.org/ns/dqv#inCategory> :contextualDimensions ;
+            <http://www.w3.org/ns/prov#hadPrimarySource> <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ;
+            <http://www.w3.org/ns/prov#wasDerivedFrom> <https://doi.org/10.1145/3362121> .
+
+
+###  https://w3id.org/dqvch#relevance
+:relevance rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/ns/dqv#Dimension> ;
+           <http://www.w3.org/2004/02/skos/core#broader> :conciseness ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Relevance refers to the degree to which a dataset contains only those data elements, links and properties required for a particular context of use."@en ;
+           <http://www.w3.org/2004/02/skos/core#example> "In the metadata for a painting, specifying the artist of the painting is relevant. In contrast, including extraneous personal information about the artist, such as details of their clothing, is irrelevant for the purpose of describing the artwork."@en ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "Relevance"@en ;
+           <http://www.w3.org/ns/dqv#inCategory> :intrinsicDimensions ;
+           <http://www.w3.org/ns/prov#hadPrimarySource> <https://doi.org/10.3233/SW-150175> ,
+                                                        <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> .
+
+
+###  https://w3id.org/dqvch#semanticAccuracy
+:semanticAccuracy rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/ns/dqv#Dimension> ;
+                  <http://www.w3.org/2004/02/skos/core#broader> :accuracy ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "Semantic Accuracy refers to the degree to which the dataset correctly represents information of the domain of interest."@en ;
+                  <http://www.w3.org/2004/02/skos/core#example> "If a building can be attributed with a date, it depends on the description in the data model what kind of date it is. For instance, recording the foundation date of a church when the model specifies the completion date would be semantically inaccurate."@en ,
+                                                                "The Mona Lisa is a painting by Leonardo da Vinci. Attributing the painting to the artist Pablo Picasso would be semantically inaccurate."@en ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Semantic Accuracy"@en ;
+                  <http://www.w3.org/ns/dqv#inCategory> :intrinsicDimensions ;
+                  <http://www.w3.org/ns/prov#hadPrimarySource> <https://doi.org/10.1145/240455.240479> ,
+                                                               <https://doi.org/10.3233/SW-150175> ,
+                                                               <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ,
+                                                               <https://www.iso.org/standard/35736.html> ;
+                  <http://www.w3.org/ns/prov#wasDerivedFrom> <https://doi.org/10.1145/1012453.1012461> ;
+                  <http://www.w3.org/ns/prov#wasInfluencedBy> <https://doi.org/10.1145/1541880.1541883> .
+
+
+###  https://w3id.org/dqvch#syntacticAccuracy
+:syntacticAccuracy rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/dqv#Dimension> ;
+                   <http://www.w3.org/2004/02/skos/core#broader> :accuracy ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "Syntactic Accuracy refers to the degree to which the dataset conforms to the syntax of the employed data description language and, where applicable, the associated data model."@en ;
+                   <http://www.w3.org/2004/02/skos/core#example> "In the cultural heritage context, LIDO data should conform to the XML data description language and to the LIDO data model to be syntactically correct."@en ;
+                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Syntactic Accuracy"@en ;
+                   <http://www.w3.org/ns/dqv#inCategory> :intrinsicDimensions ;
+                   <http://www.w3.org/ns/prov#hadPrimarySource> <https://doi.org/10.1145/1012453.1012461> ,
+                                                                <https://doi.org/10.1145/1541880.1541883> ,
+                                                                <https://doi.org/10.3233/SW-150175> ,
+                                                                <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> ;
+                   <http://www.w3.org/ns/prov#wasDerivedFrom> <https://www.iso.org/standard/35736.html> .
+
+
+###  https://w3id.org/dqvch#temporalTraceability
+:temporalTraceability rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/ns/dqv#Dimension> ;
+                      <http://www.w3.org/2004/02/skos/core#broader> :traceability ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "Temporal Traceability is the degree to which a dataset has an audit trail of access and a history of changes within a particular context of use."@en ;
+                      <http://www.w3.org/2004/02/skos/core#example> "Historic buildings are typically dynamic in nature. All changes, additions, and demolitions to a building should be recorded in a detailed history of change to maintain temporal traceability."@en ;
+                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Temporal Traceability"@en ;
+                      <http://www.w3.org/ns/dqv#inCategory> :contextualDimensions ;
+                      <http://www.w3.org/ns/prov#hadPrimarySource> <https://www.iso.org/standard/35736.html> ;
+                      <http://www.w3.org/ns/prov#wasDerivedFrom> <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> .
+
+
+###  https://w3id.org/dqvch#timeConcurrency
+:timeConcurrency rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/ns/dqv#Dimension> ;
+                 <http://www.w3.org/2004/02/skos/core#broader> :currency ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Time Concurrency assesses whether all data elements, including their values and links, refer consistently to the same version of information in the domain."@en ;
+                 <http://www.w3.org/2004/02/skos/core#example> "In a museum, paintings may be relocated as part of an exhibition. If some paintings' location data are already updated to the current exhibition, while others remain outdated, the data lacks time concurrency, resulting in inconsistent representation of the exhibition."@en ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Time Concurrency"@en ;
+                 <http://www.w3.org/ns/dqv#inCategory> :contextualDimensions .
+
+
+###  https://w3id.org/dqvch#traceability
+:traceability rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/ns/dqv#Dimension> ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Traceability refers to the availability of information regarding changes of data over time."@en ;
+              <http://www.w3.org/2004/02/skos/core#narrower> :causalTraceability ,
+                                                             :temporalTraceability ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "Traceability"@en ;
+              <http://www.w3.org/ns/dqv#inCategory> :contextualDimensions .
+
+
+###  https://w3id.org/dqvch#trustworthiness
+:trustworthiness rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/ns/dqv#Dimension> ;
+                 <http://www.w3.org/2004/02/skos/core#broader> :plausibility ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Trustworthiness refers to the degree to which a dataset, including its elements and values, are believed by a relevant community within a specific context of use."@en ;
+                 <http://www.w3.org/2004/02/skos/core#example> "Cultural heritage information published by a reputable museum about an object in its possession is generally more trustworthy than information in tourist promotional material, as the museum is recognized for its expertise and responsible handling of information."@en ,
+                                                               "Similarly, the reputation, education, and experience of the data contributor influence trustworthiness."@en ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Trustworthiness"@en ;
+                 <http://www.w3.org/ns/dqv#inCategory> :contextualDimensions ;
+                 <http://www.w3.org/ns/prov#hadPrimarySource> <https://doi.org/10.3233/SW-150175> ,
+                                                              <https://www.iso.org/standard/35736.html> ;
+                 <http://www.w3.org/ns/prov#wasDerivedFrom> <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> .
+
+
+###  https://w3id.org/dqvch#understandability
+:understandability rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/ns/dqv#Dimension> ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "Understandability refers to the ease with which data can be comprehended and processed by users, including both humans and tools."@en ;
+                   <http://www.w3.org/2004/02/skos/core#narrower> :appropriateness ,
+                                                                  :versatility ;
+                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Understandability"@en ;
+                   <http://www.w3.org/ns/dqv#inCategory> :contextualDimensions .
+
+
+###  https://w3id.org/dqvch#versatility
+:versatility rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/ns/dqv#Dimension> ;
+             <http://www.w3.org/2004/02/skos/core#broader> :understandability ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Versatility refers to the extent to which data is available in different forms across different cultural perspectives, technology platforms, and user sensory abilities."@en ;
+             <http://www.w3.org/2004/02/skos/core#example> "Historical dates prior to 1582 require distinguishing between the Julian and Gregorian calendars. Providing data in multiple formats or adhering to ISO 8601 can prevent misinterpretation and enhance versatility."@en ,
+                                                           "Measurements in the metric system are easily understood in Europe but may be less intuitive for US Americans."@en ,
+                                                           "The date of New Year's celebration varies between the Gregorian and lunar calendars, necessitating contextual clarification."@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Versatility"@en ;
+             <http://www.w3.org/ns/dqv#inCategory> :contextualDimensions ;
+             <http://www.w3.org/ns/prov#hadPrimarySource> <https://doi.org/10.1145/3362121> ,
+                                                          <https://www.iso.org/standard/35736.html> ;
+             <http://www.w3.org/ns/prov#wasDerivedFrom> <https://doi.org/10.3233/SW-150175> ,
+                                                        <https://www.dama-nl.org/wp-content/uploads/2020/11/3DQ-Dictionary-of-Dimensions-of-Data-Quality-version-1.2-d.d.-14-Nov-2020.pdf> .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
