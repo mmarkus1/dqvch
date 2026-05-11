@@ -40,6 +40,13 @@ dqvch:
     rdfs:seeAlso      <https://mmarkus1.github.io/dqvch/> .
 
 # ---------------------------------------------------------------------------
+# VANN annotation property declarations (required for OWL API to read them)
+# ---------------------------------------------------------------------------
+
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri    a owl:AnnotationProperty .
+
+# ---------------------------------------------------------------------------
 # Categories
 # ---------------------------------------------------------------------------
 
