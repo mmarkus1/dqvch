@@ -12,5 +12,5 @@
 	 dc:creator <https://orcid.org/0000-0002-3975-5238>;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 	 prov:specializationOf <https://w3id.org/dqvch#>;
-	 prov:wasGeneratedAt "2026-01-01";
+	 prov:wasGeneratedAt "2025-12-01";
 .
