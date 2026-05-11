@@ -24,6 +24,7 @@ jobs:
           docker run --rm \
             -v "${{ github.workspace }}:/data" \
             ghcr.io/dgarijo/widoco:v1.4.25 \
+            -confFile /data/config.properties \
             -ontFile /data/dqvch.ttl \
             -outFolder /data/widoco-out \
             -rewriteAll \
