@@ -29,7 +29,7 @@ jobs:
             -rewriteAll \
             -includeAnnotationProperties \
             -lang en \
-            -noPlaceholders \
+            -noPlaceHolderText \
             -htaccess
 
       - name: Verify Widoco output
