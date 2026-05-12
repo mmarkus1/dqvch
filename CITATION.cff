@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+title: "DQVCH — Data Quality Vocabulary for Cultural Heritage"
+type: dataset
+authors:
+  - family-names: Matoni
+    given-names: Markus
+    orcid: "https://orcid.org/0000-0003-4389-5871"
+  - family-names: Kesper
+    given-names: Arno
+    orcid: "https://orcid.org/0000-0002-5042-1087"
+  - family-names: Taentzer
+    given-names: Gabriele
+    orcid: "https://orcid.org/0000-0002-3975-5238"
+license: CC-BY-4.0
+repository-code: "https://github.com/mmarkus1/dqvch"
+url: "https://mmarkus1.github.io/dqvch/"
+version: "1.0.0"
+date-released: "2026-05-11"
+doi: "10.5281/zenodo.20136037"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.20136037"
+    description: "Zenodo archive of the vocabulary"
+references:
+  - type: article
+    authors:
+      - family-names: Matoni
+        given-names: Markus
+      - family-names: Kesper
+        given-names: Arno
+      - family-names: Taentzer
+        given-names: Gabriele
+    title: "Quality of Descriptive Information on Cultural Heritage Objects: Definition and Empirical Evaluation"
+    year: 2026
+    url: "https://doi.org/10.48550/arXiv.2602.21249"
+    identifiers:
+      - type: doi
+        value: "10.48550/arXiv.2602.21249"
